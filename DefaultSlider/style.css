@@ -1,0 +1,118 @@
+.DefaultSlider {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.DefaultSlider__slides {
+    display: flex;
+    align-items: center;
+}
+
+.DefaultSlider__slide {
+    min-width: 100%;
+    overflow: hidden;
+    flex: 1;
+    flex-shrink: 0;
+    transition: .5s;
+}
+.DefaultSlider__slide img {
+    width: 100%;
+    height: auto;
+}
+
+/* controller */
+.DefaultSlider__slide-controller {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 20px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.DefaultSlider__slide-controller:last-child {
+    right: unset;
+    left: 20px;
+    transform: rotateZ(180deg);
+}
+/* controller-modify */
+.DefaultSlider__slide-controller--arrow {
+    width: 50px;
+    height: 50px;
+    filter: drop-shadow(0 0 5px white);
+    background: none;
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='iso-8859-1'%3F%3E%3C!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='451.846px' height='451.847px' viewBox='0 0 451.846 451.847' style='enable-background:new 0 0 451.846 451.847;' xml:space='preserve'%3E%3Cg%3E%3Cpath d='M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744 L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284 c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z'/%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3C/svg%3E%0A");;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.DefaultSlider__slide-controller--triangle {
+    width: 50px;
+    height: 50px;
+    filter: drop-shadow(0 0 5px white);
+    background: none;
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='iso-8859-1'%3F%3E%3C!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 41.999 41.999' style='enable-background:new 0 0 41.999 41.999;' xml:space='preserve'%3E%3Cpath d='M36.068,20.176l-29-20C6.761-0.035,6.363-0.057,6.035,0.114C5.706,0.287,5.5,0.627,5.5,0.999v40 c0,0.372,0.206,0.713,0.535,0.886c0.146,0.076,0.306,0.114,0.465,0.114c0.199,0,0.397-0.06,0.568-0.177l29-20 c0.271-0.187,0.432-0.494,0.432-0.823S36.338,20.363,36.068,20.176z'/%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+/* default */
+.DefaultSlider--default {
+    height: 0;
+    padding-bottom: 56.25%;
+}
+.DefaultSlider--default .DefaultSlider__slides {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.DefaultSlider--default .DefaultSlider__slide-controller {
+    top: calc(50% - 10px)
+}
+.DefaultSlider--default .DefaultSlider__slide-controller:last-child {
+    top: calc(50% - 10px)
+}
+
+/* custom */
+
+.DefaultSlider--custom {
+  height: 100%;
+}
+
+.DefaultSlider--custom .DefaultSlider__slides {
+    height: 100%;
+}
+
+.DefaultSlider--custom .DefaultSlider__slide {
+    height: 100%;
+}
+.DefaultSlider--custom .DefaultSlider__slide img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* imageSize */
+.DefaultSlider--imageSize {
+
+}
+.DefaultSlider--imageSize .DefaultSlider__slides {
+
+}
+.DefaultSlider--imageSize .DefaultSlider__slide-controller {
+
+}
+.DefaultSlider--imageSize .DefaultSlider__slide-controller:last-child {
+
+}
+
+.wrap {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
